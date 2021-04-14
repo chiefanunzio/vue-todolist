@@ -25,9 +25,9 @@
 
         <div class="listitem">
             <ul v-if = "toDoList.length > 0">
-                <li v-for = "(elem ) in toDoList">
+                <li v-for = "(elem ,i) in toDoList">
                     {{elem}}
-                    <i class="fas fa-times" v-on:click = "rimuoviTodo"></i>
+                    <i class="fas fa-times" v-on:click = "rimuoviTodo(i)"></i>
                 </li>
             </ul>
             <h1 v-else>
